@@ -1,0 +1,29 @@
+.site-layout {
+    height: 1000;
+    background: linear-gradient(0deg, rgba(77, 189, 176, 1) 1.6%, rgba(90, 219, 204, 1) 100%);
+}
+
+.menu-background {
+    background: rgba(205, 214, 219, 0);
+    color: white;
+}
+
+.size-for-max-window {
+    min-width: 1280px;
+    width: 1440px;
+}
+
+.size-for-small-window {
+    min-width: 480px;
+    width: 640px;
+}
+
+.size-for-middle-window {
+    min-width: 800px;
+    width: 960px;
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+}
