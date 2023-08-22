@@ -6,11 +6,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/to_do">
+        <Route path="/new_test/to_do">
           <ControlPanel/>
         </Route>
-        <Route path="/">
-          <Redirect to={'/to_do'}/>
+        <Route path="/new_test">
+          <Redirect to={'/new_test/to_do'}/>
         </Route>
       </Switch>
     </Router>
