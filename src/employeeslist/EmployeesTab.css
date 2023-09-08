@@ -1,4 +1,54 @@
-.flexbox-container {
+.flexbox-container-with-inform-panel {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: 110px;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 25px;
+}
+.text-div-style {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.edit-button-style {
+    color: rgba(90, 219, 204, 1);
+    border-color: rgba(90, 219, 204, 1);
+    border: 2px solid rgba(90, 219, 204, 1);
+}
+
+.save-button-style {
+    background-color: rgba(90, 219, 204, 1);
+    color: white;
+}
+
+.table-div-style {
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 8px;
+    padding-bottom: 20px;
+}
+
+.list-scroll {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.ant-table-layout-fixed table {
+    table-layout: auto;
+}
+
+.ant-table-fixed {
+    table-layout: fixed;
+}
+
+.ant-table-tbody > tr > td {
+    word-wrap: break-word;
+    word-break: break-all;
 }

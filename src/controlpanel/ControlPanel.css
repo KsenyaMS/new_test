@@ -1,11 +1,28 @@
 .site-layout {
-    height: 1000;
     background: linear-gradient(0deg, rgba(77, 189, 176, 1) 1.6%, rgba(90, 219, 204, 1) 100%);
 }
 
 .menu-background {
     background: rgba(205, 214, 219, 0);
+    margin-top: 150px;
+}
+
+.menu-item-style {
     color: white;
+}
+
+.button-style {
+    margin: 5px;
+    border: "1px solid white";
+    box-shadow: "0 0 10px 5px rgba(242, 242, 242, 1)";
+}
+
+.content-style {
+    background: #f7f7f7;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 50px;
+    padding-top: 10px;
 }
 
 .size-for-max-window {
@@ -26,4 +43,23 @@
 .flexbox-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.user-content-div {
+    flex-basis: 24%;
+    display: flex;
+    margin-right: 4vw;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.avatar-style {
+    flex: 1 1 30%;
+}
+
+.user-inform-style {
+    flex: 1 1 70%;
 }
