@@ -1,0 +1,15 @@
+.list-scroll {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.save-button-style {
+    background-color: rgba(90, 219, 204, 1);
+    color: white;
+}
+
+.edit-button-style {
+    color: rgba(90, 219, 204, 1);
+    border-color: rgba(90, 219, 204, 1);
+    border: 2px solid rgba(90, 219, 204, 1);
+}

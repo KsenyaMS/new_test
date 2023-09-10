@@ -1,22 +1,17 @@
 import React, {useState} from "react";
 import {isMobile} from 'react-device-detect';
-import {Link, Redirect, Route, Switch, useRouteMatch, useHistory} from "react-router-dom";
-import {Layout, Menu, message, Divider, Tooltip, Dropdown, Typography, ConfigProvider, Avatar, Card, Anchor, Button, Breadcrumb} from 'antd';
+import {Link, Redirect, Route, Switch, useRouteMatch} from "react-router-dom";
+import {Layout, Menu, Typography, ConfigProvider, Avatar, Button, Breadcrumb} from 'antd';
 import './ControlPanel.css'
 import {UserOutlined, SignalFilled, PieChartFilled, SettingFilled, CaretLeftOutlined, CalendarFilled, FolderFilled, ProfileFilled, CaretRightOutlined} from "@ant-design/icons";
 import EmployeesTab from "../employeeslist/EmployeesTab";
-import Meta from "antd/es/card/Meta";
 import imageLogoName from "../logo.svg";
-// import DragAndDropPage from "../draganddrop/DragAndDropPage";
 
 const {Header, Sider, Content, Footer} = Layout;
 const {Text} = Typography;
-let namesList = JSON.parse(localStorage.getItem("NAMES")) ? JSON.parse(localStorage.getItem("NAMES")) : [];
 
 export default function ControlPanel(props) {
   let [activeRouteKey, setActiveRouteKey] = useState("users");
-
-  const history = useHistory();
 
   let {path, url} = useRouteMatch();
 
@@ -85,7 +80,7 @@ export default function ControlPanel(props) {
             }
           >
             <div className="flexbox-container">
-              <div>
+              <div className="buttons-div">
                 <Button shape="circle" className="button-style" icon={<CaretLeftOutlined style={{color: "grey", fontSize: 18}} />}/>
                 <Button shape="circle" className="button-style" icon={<CaretRightOutlined style={{color: "grey", fontSize: 18}} />}/>
               </div>

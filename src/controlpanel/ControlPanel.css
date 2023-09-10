@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Srbija Sans'; 
+	src: url(../SrbijaSans-Regular.ttf); 
+}
+
 .site-layout {
     background: linear-gradient(0deg, rgba(77, 189, 176, 1) 1.6%, rgba(90, 219, 204, 1) 100%);
 }
@@ -25,21 +30,6 @@
     padding-top: 10px;
 }
 
-.size-for-max-window {
-    min-width: 1280px;
-    width: 1440px;
-}
-
-.size-for-small-window {
-    min-width: 480px;
-    width: 640px;
-}
-
-.size-for-middle-window {
-    min-width: 800px;
-    width: 960px;
-}
-
 .flexbox-container {
     display: flex;
     flex-direction: row;
@@ -49,17 +39,26 @@
 }
 
 .user-content-div {
-    flex-basis: 24%;
+    flex-basis: 25%;
     display: flex;
     margin-right: 4vw;
     align-items: flex-start;
     justify-content: space-around;
 }
 
+.buttons-div {
+    flex-basis: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
 .avatar-style {
-    flex: 1 1 30%;
+    flex: 1 1 20%;
 }
 
 .user-inform-style {
-    flex: 1 1 70%;
+    flex: 1 1 80%;
+    margin-left: 3px;
+    flex-wrap: wrap;
 }

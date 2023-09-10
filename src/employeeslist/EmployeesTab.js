@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from "react";
 import Typography from "antd/es/typography/Typography";
-import {Button, Table, Input, ConfigProvider, Pagination} from "antd";
+import {Table, Input, ConfigProvider, Pagination} from "antd";
 import {SearchOutlined} from '@ant-design/icons';
 import "./EmployeesTab.css";
-import { format } from 'date-fns';
-import moment from "moment";
 import DropdownList from "./components/DropdownList";
 
 const { Text, Title } = Typography;
@@ -72,7 +70,7 @@ const initialData = [
 
 export default function EmployeesTab() {
 
-  
+
   let [data, setData] = useState([]);
   let [loading, setLoading] = useState(true);
   let [columnsStatus, setColumnsStatus] = useState({
@@ -439,6 +437,20 @@ export default function EmployeesTab() {
     setLoading(false);
   }, [loading, columnsStatus]);
 
+  const handleChange = (value) => {
+    let filteredData;
+    if (value !== undefined && value !== '') {
+      let filter = value.toLowerCase();
+      filteredData = data.filter(item => {
+        return Object.keys(item).some(key =>
+          typeof item[key] === "string" && item[key].toLowerCase().includes(filter)
+        );
+      });
+      console.log({filteredData});
+      setData(filteredData);
+    } else setData(initialData);
+  }
+
   return (
     <>
       <Title strong level={4}>Общая база сотрудников</Title>
@@ -466,7 +478,7 @@ export default function EmployeesTab() {
               size="large"
               placeholder={"Поиск"}
               prefix={<SearchOutlined style={{fontSize: "18px", color: "black"}}/>}
-              // onChange={(e) => { setSearch(e.target.value) }}
+              onChange={(e) => handleChange(e.target.value)}
               allowClear={true}
               style={{width: 350, borderRadius: 30}}
             />
